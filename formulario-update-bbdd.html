@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update the E numbers database</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <form id="actualizar-bbdd">
+        <fieldset>
+        <legend>Update the E number database</legend>
+        <label for="vegan-numbers">
+            Vegan E numbers:
+        </label>
+        <textarea id="vegan-numbers" name="vegan-numbers"></textarea>
+        <label for="not-vegan-numbers">
+            Not vegan E numbers:
+        </label>
+        <textarea id="not-vegan-numbers" name="not-vegan-numbers"></textarea>
+        <label for="unclear-numbers">
+            Numbers who need more information to know if they are vegan or not:
+        </label>
+
+        <textarea id="unclear-numbers" name="unclear-numbers"></textarea>
+
+        <input type="submit" value="Modify data">
+    </fieldset>
+    </form>
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>
