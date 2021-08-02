@@ -11,6 +11,7 @@
 :root {
     --cakeGreen: #4ea33b;
     --errorRed: rgb(253, 0, 0);
+    --lightGreen: #fffb00;
 }
 
 html {
@@ -44,7 +45,7 @@ form {
 
 form * {
     display: block;
-    margin-bottom: calc(15px + 2vh);
+    margin-bottom: calc(.5em);
 }
 
 input[type=submit] {
@@ -71,7 +72,16 @@ fieldset {
 /* Form - Validation
 ============================================================
 */
-section#not-valid-text {
-    color: var(--errorRed);
-    font-size: 15px;
+section.not-valid-text, section.not-valid-data {
+    color: var( --lightGreen);
+    font-size: 1em;
+    height: calc(15px + 1.5em);
+}
+
+section.not-valid-text {
+    opacity: 0;
+}
+
+section.activo {
+    opacity: 1;
 }
