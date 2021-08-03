@@ -77,11 +77,3 @@ section.not-valid-text, section.not-valid-data {
     font-size: 1em;
     height: calc(15px + 1.5em);
 }
-
-section.not-valid-text {
-    opacity: 0;
-}
-
-section.activo {
-    opacity: 1;
-}
