@@ -5,9 +5,10 @@
     $unclearNumber = $_POST["unclear-numbers"];
 
     $patt = '/ |\"|\'|`|\[|]/';
-    $veganArray = explode(",", preg_replace($patt, "", $vegan));
-    $notVeganArray = explode(",", preg_replace($patt, "", $notVegan));
-    $unclearNumberArray = explode(",", preg_replace($patt, "", $unclearNumber));
+    $veganArray = explode(",", strtoupper(preg_replace($patt, "", $vegan)));
+    $notVeganArray = explode(",", strtoupper(preg_replace($patt, "", $notVegan)));
+    $unclearNumberArray = explode(",", strtoupper(preg_replace($patt, "", $unclearNumber)));
+
     $date = date("d-m-Y");
 
     $sql = "REPLACE INTO  `enumbers` (`enumber`, `vegan`, `last_update`) VALUES ";
@@ -28,8 +29,6 @@
     }
 
     $sql = substr($sql, 0, -1);
-
-    echo $sql;
 
     try{
         $con = new PDO($host, $user, $password);

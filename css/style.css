@@ -33,6 +33,19 @@ body {
     align-items: center;
 }
 
+body#index {
+    flex-direction: column;
+}
+
+body#index header {
+    margin-top: -30vh;
+    width: 100%;
+}
+
+body#index main {
+    width: 100%;
+}
+
 /* Form
 ============================================================
 */
@@ -69,11 +82,53 @@ fieldset {
     border: 2px solid yellowgreen;
 }
 
-/* Form - Validation
+/* Form - Validation errors
 ============================================================
 */
 section.not-valid-text, section.not-valid-data {
     color: var( --lightGreen);
     font-size: 1em;
     height: calc(15px + 1.5em);
+}
+
+/* Form - Index
+============================================================
+*/
+
+body#index form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+body#index form input[type="text"] {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Titles
+============================================================
+*/
+
+h1 {
+
+    color:white;
+    text-align: center;
+    font-size: 5em;
+    text-shadow: 1px 1px 5px black;
+}
+
+h1 p {
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    body#index h1{
+        font-size: 12.5vw;
+    }
+
+    body#index form input[type="text"] {
+        width: 90%;
+    }
 }
