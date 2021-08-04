@@ -1,4 +1,4 @@
-export default function sendData(form) {
+export default function modifyBBDD(form) {
     form.preventDefault();
     let finalWarning = document.querySelector(".not-valid-data");
     if(document.querySelector(".not-valid-text p")){
@@ -7,7 +7,7 @@ export default function sendData(form) {
     } else {
         finalWarning.innerHTML = "";
         let data = new FormData(document.querySelector("form"));
-        fetch("php/enviarDatos.php", {
+        fetch("php/addData.php", {
             method: "POST",
             body: data
         })
