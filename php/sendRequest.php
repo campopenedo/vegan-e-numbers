@@ -1,4 +1,12 @@
 <?php
     $numbers = $_POST["search-engine"];
-    echo $numbers;
+
+    $numbersClean = str_replace(" ", "",$numbers);
+    
+    $numbersArray = explode(",", $numbersClean);
+
+    foreach($numbersArray as $val) {
+        echo $val . " ";
+    }
+
 ?>
