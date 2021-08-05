@@ -43,7 +43,6 @@
 
         foreach($notVeganArray as $eNumber) {
             if(strlen($eNumber) > 0){
-                echo "hola ";
                 $send->bindValue(":nv$eNumber", $eNumber);
 
             }
@@ -51,7 +50,6 @@
 
         foreach($unclearNumberArray as $eNumber) {
             if(strlen($eNumber) > 0){
-                echo "hola ";
                 $send->bindValue(":u$eNumber", $eNumber);
 
             }

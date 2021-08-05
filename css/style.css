@@ -1,7 +1,7 @@
 /* 
     CSS for e-vegan-numbers
     Created by: Ezequiel M. Campo Penedo
-    Date: 1/8/2020
+    Date: 5/8/2020
 */
 
 
@@ -10,8 +10,12 @@
 */
 :root {
     --cakeGreen: #4ea33b;
+    --darkGreen: #105800;
+    --lightGreen: rgb(51, 255, 0);
+    --lightYellow: rgb(251, 255, 0);
     --errorRed: rgb(253, 0, 0);
-    --lightGreen: #fffb00;
+    --blackTrans: rgba(0,0,0,.2);
+    --blueAndGrey: rgb(124, 180, 190);
 }
 
 html {
@@ -102,7 +106,7 @@ body#index form {
     justify-content: center;
 }
 body#index form input[type="text"] {
-    width: 500px;
+    width: 600px;
     margin: 0 auto;
     margin-bottom: 20px;
 }
@@ -123,12 +127,50 @@ h1 p {
     margin: 0 auto;
 }
 
+/* List results
+============================================================
+*/
+
+ul {
+    width: 600px;
+    height: 40vh;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: white;
+    font: 25px bold sans-serif;
+    list-style-type: none;
+    overflow-y: auto;
+    scrollbar-color: var(--darkGreen) var(--blackTrans);
+    text-align: center;
+}
+
+li span.vegan {
+    font-weight: bold;
+    color: var(--lightGreen);
+}
+
+li span.not-vegan {
+    font-weight: bold;
+    color: var(--lightYellow);
+}
+
+li span.depends {
+    font-weight: bold;
+    color: var(--blueAndGrey);
+}
+
+
+
 @media screen and (max-width: 600px) {
+
+    /* Little devices
+============================================================
+    */
     body#index h1{
         font-size: 12.5vw;
     }
 
-    body#index form input[type="text"] {
+    body#index form input[type="text"], ul {
         width: 90%;
     }
 }
