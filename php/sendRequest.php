@@ -18,7 +18,7 @@
     $sql = 'SELECT * FROM enumbers WHERE';
 
      foreach($numbersArray as $key => $val) {
-            $sql = $sql . (preg_match($patt, $val) && $key !== (count($numbersArray) - 1)
+            $sql = $sql . ($key !== (count($numbersArray) - 1)
                 ? " enumber = :bv$val"
                 : " enumber LIKE :bv$val"
             );
@@ -34,7 +34,7 @@
         $send = $con->prepare($sql);
         
         foreach($numbersArray as $val) {
-                $send->bindValue(":bv$val", (preg_match($patt, $val) ? $val : $val . "%"));
+                $send->bindValue(":bv$val", ($key !== (count($numbersArray) - 1) ? $val : $val . "%"));
         }
 
         $send->execute();
