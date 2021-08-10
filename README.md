@@ -15,3 +15,8 @@ Type the E number you want to know if is vegan or not in the input text form. Yo
 The response have the name of the E Number, if is vegan, not vegan, or depends by the manufacter. That last options means that can be or not vegan, you need to contact to the manufacter to know it.
 
 Also brings the day of the last update of that especific number.
+
+
+#### object-e-numbers file
+
+The object-e-numbers file in this proyect is an object with all the information on the database, so if you want to use the information of this web app you have it in a form of an object there
