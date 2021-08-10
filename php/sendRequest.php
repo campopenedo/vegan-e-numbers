@@ -33,7 +33,7 @@
 
         $send = $con->prepare($sql);
         
-        foreach($numbersArray as $val) {
+        foreach($numbersArray as $key => $val) {
                 $send->bindValue(":bv$val", ($key !== (count($numbersArray) - 1) ? $val : $val . "%"));
         }
 
@@ -48,4 +48,3 @@
     }
 
 ?>
-
